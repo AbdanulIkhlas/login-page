@@ -165,7 +165,6 @@ main {
     background-position: center;
     background-size: cover;
     border-radius: 20px;
-
 }
 
 article {
@@ -265,18 +264,20 @@ article .content .right {
     position: relative;
     margin-bottom: 33px;
     box-sizing: border-box;
+    border-bottom: 2px solid white;
 }
 
 .email input[type=email] {
-    width: 98%;
+    width: 88%;
     height: 30px;
+    display: flex;
+    justify-content: left;
     background-color: transparent;
     border: none;
     outline: none;
     font-size: 14.5pt;
     color: white;
     letter-spacing: 1px;
-    border-bottom: 2px solid white;
 }
 
 .icon {
@@ -295,26 +296,31 @@ article .content .right {
     position: relative;
     margin-bottom: 33px;
     box-sizing: border-box;
+    border-bottom: 2px solid white;
 }
 
 .open-eye {
     display: block;
+    cursor: pointer;
 }
 
 .close-eye {
+    cursor: pointer;
     display: none;
 }
 
-.password input[type=password] {
-    width: 98%;
+.password input[type=password],
+.password input[type=text] {
+    width: 88%;
     height: 30px;
+    display: flex;
+    justify-content: left;
     background-color: transparent;
     border: none;
     outline: none;
     font-size: 14.5pt;
     color: white;
-    letter-spacing: 5px;
-    border-bottom: 2px solid white;
+    letter-spacing: 3px;
 }
 
 ::placeholder {
@@ -346,6 +352,7 @@ article .content .right {
     border: 1px solid #202228;
     border-radius: 5px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .content .right .login-section .sign-up span {
@@ -354,3 +361,65 @@ article .content .right {
 
 
 /* end main */
+
+
+/* Responsif pada lebar layar 720px atau lebih besar */
+@media (max-width: 999px) and (min-width: 720px) {
+
+    /* Atur lebar artikel */
+    article {
+        width: 80%;
+    }
+
+    /* Atur lebar kotak kiri dan kanan */
+    .content .left {
+        width: 100%;
+    }
+
+    .content .right {
+        width: 100%;
+        border-radius: 0;
+        /* Hapus border-radius pada layar lebar ini */
+    }
+
+    /* Atur ulang tata letak menggunakan Flexbox */
+    .content {
+        display: flex;
+        flex-direction: column;
+        /* Konten diatur menjadi satu kolom */
+    }
+}
+
+/* Responsif pada lebar layar kurang dari 720px */
+@media (max-width: 719px) {
+
+    /* Atur lebar artikel */
+    article {
+        width: 100%;
+        border-radius: 0;
+        /* Hapus border-radius pada layar kecil ini */
+    }
+
+    /* Atur lebar kotak kiri dan kanan */
+    .content .left {
+        width: 100%;
+        padding: 30px 15px;
+        /* Sesuaikan padding pada layar kecil ini */
+        text-align: center;
+    }
+
+    .content .right {
+        width: 100%;
+        border-radius: 0;
+        /* Hapus border-radius pada layar kecil ini */
+    }
+
+    /* Atur lebar input email dan password */
+    .email input[type=email],
+    .password input[type=password],
+    .password input[type=text] {
+        width: 100%;
+    }
+
+
+}
