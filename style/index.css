@@ -164,7 +164,7 @@ main {
     background-image: url('../image/main2.jpg');
     background-position: center;
     background-size: cover;
-    border-radius: 20px 2px 2px 20px;
+    border-radius: 20px;
 
 }
 
@@ -176,7 +176,7 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid rgba(39, 39, 39, 0.666);
-    border-radius: 20px 2px 2px 20px;
+    border-radius: 20px;
     box-sizing: border-box;
 }
 
@@ -229,18 +229,6 @@ article .content .left p {
 /* ----------------------------------- */
 
 /* * style box right*/
-
-.background-transparent {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -90;
-    border-radius: 0px 2px 2px 0px;
-    /* filter: blur(5px); */
-}
-
 article .content .right {
     width: 35%;
     position: relative;
@@ -249,7 +237,9 @@ article .content .right {
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    backdrop-filter: blur(5px);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(10px);
 }
 
 .content .right .login-section {
