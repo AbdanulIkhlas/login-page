@@ -2,5 +2,5 @@
 
 Task to create a login page
 
-Result : <br><br>
+Result : <br>
 <img src="https://github.com/AbdanulIkhlas/login-page/blob/main/doc/documentation.png" align="left" height="400"> 
